@@ -715,6 +715,77 @@ li {
 
 }
 
+.appreciation-header {
+    padding: 15px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #e0e0e0;
+    border-radius: 20px;
+  }
+  
+  .appreciation-header h1 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .appreciation-meta {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .appreciation-meta .separator {
+    margin: 0 10px;
+    color: #999;
+  }
+  
+  .appreciation-meta .date,
+  .appreciation-meta .referral {
+    display: inline-block;
+  }
+  
+  .appreciation-meta strong {
+    color: #444;
+  }
+  
+  .appreciation-meta {
+    font-size: 14px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .appreciation-meta .separator {
+    margin: 0 10px;
+    color: #999;
+  }
+  
+  .appreciation-meta .date,
+  .appreciation-meta .referral {
+    margin-right: 10px;
+  }
+  
+  .appreciation-meta strong {
+    color: #444;
+  }
+  
+  .linkedin-link {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 10px;
+    color: #0077b5; /* LinkedIn blue */
+    transition: color 0.3s ease;
+  }
+  
+  .linkedin-link:hover {
+    color: #005582; /* Darker blue on hover */
+  }
+  
+  .linkedin-link svg {
+    width: 20px;
+    height: 20px;
+  }
+  
 /*End footer*/
 
 /*Start animations*/
