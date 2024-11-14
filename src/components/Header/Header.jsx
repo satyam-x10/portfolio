@@ -5,6 +5,10 @@ import { BiPhoneCall, BiMenu, BiX } from "react-icons/bi";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const handleMenuItemClick = () => {
+    setIsMenuOpen(false); // Close menu when item is clicked
+  };
+
   return (
     <div className={`bg-primary ${css.wrapper}`}>
       <div className={`innerWidth ${css.container}`}>
@@ -22,23 +26,22 @@ const Header = () => {
 
         {/* Menu Items */}
         <ul className={`${css.menu} ${isMenuOpen ? css.menuOpen : ""}`}>
-          <li>
+          <li onClick={handleMenuItemClick}>
             <a href="#experties">Achievements</a>
           </li>
-          <li>
+          <li onClick={handleMenuItemClick}>
             <a href="#work">Experience</a>
           </li>
-          <li>
+          <li onClick={handleMenuItemClick}>
             <a href="#portfolio">Portfolio</a>
           </li>
-          <li>
+          <li onClick={handleMenuItemClick}>
             <a href="#people">Testimonials</a>
           </li>
-          <li className={css.phone}>
-            <a href="tel:+916203134277">
+            <a onClick={handleMenuItemClick} className={css.phone} href="tel:+916203134277">
               <BiPhoneCall size="40px" />
+              Call Me
             </a>
-          </li>
         </ul>
       </div>
     </div>

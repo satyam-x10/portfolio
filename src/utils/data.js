@@ -1,6 +1,3 @@
-import { HiOutlineDesktopComputer } from "react-icons/hi";
-import { CiMobile1 } from "react-icons/ci";
-import { MdWorkspacesOutline } from "react-icons/md";
 
 export const achievementsData = [
   {
@@ -174,28 +171,28 @@ export const projects = [
   {
     name: "Drop Love",
     img: "./droplove.jpg",
-    tech: ["SaaS", "AI", "LLM", "SERP API", "MongoDB"],
+    tech: ["python, AI, Weather API, Chatbot"],
     detail: "This bot takes the city name of partners and if Weather is romantic it sends a Cute Shayari . It started a conversation , Ask them for Coffee . ❤️",
     link: "https://github.com/satyam-x10/DropLove",
   },
   {
     name: "Sylvan Stronghold",
     img: "./sylvanstronghold.png",
-    tech: ["SaaS", "AI", "LLM", "SERP API", "MongoDB"],
+    tech: ["Unity 3D", "C#", "Game Development"],
     detail: "A Unity 3-d Farming Game developed on Unity",
     link: "https://www.linkedin.com/posts/satyamx10_gamedevelopment-unity-sylvanstronghold-activity-7109193238112088064-LE7x/",
   },
   {
     name: "IMBY",
     img: "./imby.png",
-    tech: ["SaaS", "AI", "LLM", "SERP API", "MongoDB"],
-    detail: "A SaaS platform that generates personalized learning flowcharts using AI and Google SERP API.",
+    tech: ["AI", "Chatbot", "Web Development","System Design"],
+    detail: "A Website that helps you to talk to your loved ones and AI.",
     link: "https://github.com/satyam-x10/I-am-Beside-You",
   },
   {
     name: "Oscar",
     img: "./oscar.png",
-    tech: ["SaaS", "AI", "LLM", "SERP API", "MongoDB"],
+    tech: ["Web Scraping", "API", "Web Development"],
     detail: "Website which provides data on Movies with Oscars",
     link: "https://satyam-x10.github.io/oscar/",
   },

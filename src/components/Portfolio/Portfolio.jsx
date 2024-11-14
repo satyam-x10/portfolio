@@ -2,25 +2,21 @@ import React from "react";
 import { motion } from "framer-motion";
 import css from "./Portfolio.module.scss";
 import { projects } from "../../utils/data";
-import {
-  fadeIn,
-  staggerChildren,
-  textVariant,
-  textVariant2,
-} from "../../utils/motion";
+import { fadeIn, staggerChildren, textVariant } from "../../utils/motion";
+
 const Portfolio = () => {
   return (
-    <section
-      variants={staggerChildren}
-      initial="hidden"
-      whileInView="show"
+    <motion.section
+      variants={staggerChildren} // Apply staggerChildren to the section
+      initial="hidden" // Set initial state
+      animate="show" // Set animation to 'show'
       viewport={{ once: false, amount: 0.25 }}
       className={`${css.wrapper}`}
     >
       <a className="anchor" id="portfolio"></a>
 
-      <div className={`innerWidth flexCenter ${css.container}`}>
-        <div
+      <motion.div className={`innerWidth flexCenter ${css.container}`}>
+        <motion.div
           variants={textVariant(0.4)}
           className={`flexCenter ${css.heading}`}
         >
@@ -32,7 +28,7 @@ const Portfolio = () => {
               You Learn more from Projects than Tutorial hells
             </strong>
           </div>
-        </div>
+        </motion.div>
         <div
           style={{
             display: "grid",
@@ -43,18 +39,11 @@ const Portfolio = () => {
           }}
         >
           {projects.map((project, i) => (
-            <div
-              
-              style={{
-                backgroundColor: "#ffffff",
-                borderRadius: "10px",
-                overflow: "hidden",
-                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.5)",
-                textAlign: "center",
-                cursor: "pointer",
-                transition: "box-shadow 0.3s ease",
-                padding: "1rem",
-              }}
+            <motion.div
+              key={i}
+              variants={textVariant(0.9)}
+              initial="hidden"
+              animate="show"
               whileHover={{ scale: 1.05 }}
               onClick={() =>
                 window.open(project.link, "_blank", "noopener,noreferrer")
@@ -67,6 +56,16 @@ const Portfolio = () => {
                 (e.currentTarget.style.boxShadow =
                   "0 4px 8px rgba(0, 0, 0, 0.15)")
               }
+              style={{
+                backgroundColor: "#ffffff",
+                borderRadius: "10px",
+                overflow: "hidden",
+                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.5)",
+                textAlign: "center",
+                cursor: "pointer",
+                transition: "box-shadow 0.3s ease",
+                padding: "1rem",
+              }}
             >
               <span
                 style={{
@@ -115,11 +114,11 @@ const Portfolio = () => {
                   </span>
                 ))}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 };
 
