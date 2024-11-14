@@ -10,17 +10,17 @@ import {
 } from "../../utils/motion";
 const Portfolio = () => {
   return (
-    <motion.section
+    <section
       variants={staggerChildren}
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
-      className={`paddings ${css.wrapper}`}
+      className={`${css.wrapper}`}
     >
       <a className="anchor" id="portfolio"></a>
 
       <div className={`innerWidth flexCenter ${css.container}`}>
-        <motion.div
+        <div
           variants={textVariant(0.4)}
           className={`flexCenter ${css.heading}`}
         >
@@ -32,7 +32,7 @@ const Portfolio = () => {
               You Learn more from Projects than Tutorial hells
             </strong>
           </div>
-        </motion.div>
+        </div>
         <div
           style={{
             display: "grid",
@@ -49,7 +49,7 @@ const Portfolio = () => {
                 backgroundColor: "#ffffff",
                 borderRadius: "10px",
                 overflow: "hidden",
-                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.15)",
+                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.5)",
                 textAlign: "center",
                 cursor: "pointer",
                 transition: "box-shadow 0.3s ease",
@@ -119,7 +119,7 @@ const Portfolio = () => {
           ))}
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

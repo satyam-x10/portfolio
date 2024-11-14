@@ -7,56 +7,68 @@ import { fadeIn, staggerContainer, textVariant } from "../../utils/motion.js";
 const Experties = () => {
   return (
     <section className={css.wrapper}>
-      <span className="primaryText yPaddings xPaddings">My Achievements</span>
-      <a className="anchor" id="experties"></a>
+            <a className="anchor" id="experties"></a>
+
+      <motion.span 
+        variants={textVariant(0.1)}
+        initial="hidden"
+        whileInView="show"
+        className={css.headingText}
+      >
+        My Achievements
+      </motion.span>
+      
+      
       <motion.div
         variants={staggerContainer}
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
-        className={`paddings yPaddings innerWidth flexCenter ${css.container}`}
+        className={css.container}
       >
-        {/* left side */}
-        <div className={css.leftSide}>
-          {achievementsData.map((exp, i) => {
-            return (
-              <div
-              key={i}
-              className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+        {/* Left Side - Achievements */}
+        <motion.div 
+          variants={fadeIn("right", "tween", 0.2, 1)}
+          className={css.leftSide}
+        >
+          {achievementsData.map((achievement, index) => (
+            <motion.div
+              key={index}
+              variants={fadeIn("up", "tween", 0.2 * index, 0.6)}
+              className={css.achievementCard}
             >
-              <div className="flex p-6">
-                {/* Content container on the right */}
-                <div className="ml-6 flex-1">
-                  <div className="mb-2 flex">
-                    <h3 className="text-xl font-bold text-gray-900">
-                      {exp.title}
-                    </h3>
-                  </div>
-                  <br />
-                  <p className="text-gray-600 mb-4">{exp.description}</p>
+              <div className={css.cardContent}>
+                <h3 className={css.title}>{achievement.title}</h3>
+                <p className={css.description}>{achievement.description}</p>
+                {achievement.link && (
                   <a
-                    href={exp.link}
+                    href={achievement.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-600 hover:text-blue-800 font-medium"
+                    className={css.link}
                   >
-                    {exp.linkText}
+                    {achievement.linkText || 'Learn More'}
                   </a>
-                </div>
+                )}
               </div>
-            </div>
-            
-            );
-          })}
-        </div>
+            </motion.div>
+          ))}
+        </motion.div>
 
-        {/* right */}
-        <motion.div variants={textVariant(0.5)} className={css.rightSide}>
-          <span className="primaryText">What do I help? </span>
-          {WhatDoIHelp.map((paragraph, i) => (
-            <span className="secondaryText" key={i}>
+        {/* Right Side - What do I help? */}
+        <motion.div 
+          variants={fadeIn("left", "tween", 0.4, 1)}
+          className={css.rightSide}
+        >
+          <span className={css.primaryText}>What do I help?</span>
+          {WhatDoIHelp.map((paragraph, index) => (
+            <motion.span
+              key={index}
+              variants={fadeIn("up", "tween", 0.1 * index, 0.6)}
+              className={css.secondaryText}
+            >
               {paragraph}
-            </span>
+            </motion.span>
           ))}
         </motion.div>
       </motion.div>

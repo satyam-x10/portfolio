@@ -11,13 +11,13 @@ const Footer = () => {
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
       style={{
-        padding: '5px 0', 
+        padding: '10px', 
         boxShadow: '0 2px 10px rgba(0, 0, 0, 0.5)' // Add a soft shadow effect
       }}
           >
       <motion.div
         variants={footerVariants}
-        className="innerWidth yPaddings flexCenter"
+        className="innerWidth  flexCenter"
         style={{
           display: 'flex',
           justifyContent: 'space-between',

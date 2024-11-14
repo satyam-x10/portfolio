@@ -2,41 +2,130 @@
 
 .wrapper {
     overflow: hidden;
-
-
+    position: relative;
+    padding: 0rem;
+    
     .container {
         position: relative;
         z-index: 1;
+        max-width: 1200px;
+        margin: 0 auto;
 
         .upperElements {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+            
             @media (max-width: $sm) {
                 justify-content: center;
                 text-align: center;
-                gap: 2rem;
+                flex-direction: column;
+                align-items: center;
             }
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
+
+            .primaryText {
+                font-size: 2.5rem;
+                line-height: 1.2;
+                margin-bottom: 1rem;
+                
+                @media (max-width: $sm) {
+                    font-size: 2rem;
+                }
+            }
+
+            .secondaryText {
+                font-size: 1.2rem;
+                line-height: 1.5;
+                color: var(--gray);
+            }
         }
 
+        .person {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1rem auto;
+            max-width: 45rem;
+            
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-image: url("../splash.png");
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                z-index: -1;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+                max-width: 45rem;
+                object-fit: contain;
+                margin-bottom: -5px;
+            }
+
+            @media (max-width: $md) {
+                margin: 1rem auto;
+                
+                &::before {
+                    background-size: 20rem;
+                }
+                
+                img {
+                    max-width: 20rem;
+                }
+            }
+        }
+
+        .email {
+            position: relative;
+            display: inline-block;
+            color: orange;
+            margin: 1rem 0;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            
+            &:hover {
+                color: darken(orange, 10%);
+            }
+
+            @media (max-width: $sm) {
+                text-align: center;
+                width: 100%;
+            }
+        }
 
         .lowerElements {
-            @media (max-width: $sm), (max-width: $md) {
-                margin-top: 4rem;
-                gap: 2rem;
-                justify-content: center;
-            }
-            margin-top: 12rem;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+            gap: 4rem;
+            margin-top: 2rem;
+
+            @media (max-width: $md) {
+                justify-content: center;
+                text-align: center;
+            }
+
             .experience {
                 display: flex;
                 align-items: center;
                 gap: 1rem;
-                >:nth-child(2) {
-                    line-height: 25px;
+
+                .primaryText {
+                    font-size: 2rem;
+                    font-weight: bold;
+                }
+
+                .secondaryText {
+                    font-size: 1rem;
+                    line-height: 1.4;
                 }
             }
 
@@ -44,49 +133,25 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                gap: 1rem;
 
                 img {
-                    margin-bottom: 1rem;
                     width: 3.5rem;
+                    height: auto;
+                }
+
+                span {
+                    text-align: center;
+                }
+
+                .certifications {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5rem;
+                    font-weight: bold;
+                    text-align: center;
                 }
             }
-        }
-
-        .person {
-            @media (max-width: $sm ), (max-width: $md) {
-                position: relative;
-                left: 0;
-                background-size: 20rem;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background-position: bottom;
-            }
-            position: absolute;
-            bottom: -2rem;
-            margin: auto;
-            background-image: url("../splash.png");
-            background-repeat: no-repeat;
-            background-size: 23rem;
-            left: 33%;
-
-            img {
-                @media (max-width: $sm ) {
-                    width: 23rem;
-                }
-                margin-bottom: -5px;
-            }
-        }
-
-        .email {
-            @media (max-width: $sm ) {
-                position: relative;
-                display: none;
-            }
-            position: absolute;
-            top: 50%;
-            left: 0;
-            color: orange;
         }
     }
 }

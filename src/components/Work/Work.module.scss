@@ -1,66 +1,142 @@
 @import '../../styles/contants.scss';
 
 .wrapper {
+    padding: 4rem 0;
+    background: var(--bg-light, #fff);
+
     .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0;
+        display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 3rem;
+
+        .heading {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 2rem;
+
+            @media (max-width: $sm) {
+                font-size: 2rem;
+            }
+        }
 
         .experiences {
-            width: 100%;
-            flex-direction: column;
-            gap: 1.4rem;
             position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            padding: 0 1rem;
 
             .exp {
-                width: 100%;
-                justify-content: space-between;
-                line-height: 40px;
-                align-items: flex-start;
+                display: flex;
+                gap: 2rem;
+                padding: 1.5rem;
+                background: rgba(255, 255, 255, 0.05);
+                border-radius: 1rem;
+                transition: all 0.3s ease;
+                position: relative;
+                z-index: 2;
 
-                >div {
+                @media (max-width: $md) {
+                    flex-direction: column;
+                    gap: 1.5rem;
+                }
+
+                &:hover {
+                    background: rgba(255, 255, 255, 0.1);
+                    transform: translateY(-2px);
+                    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+                }
+
+                .post {
                     flex: 1;
+                    
+                    h1 {
+                        font-size: 1.5rem;
+                        font-weight: 600;
+                        color: var(--primary);
+                        margin-bottom: 0.5rem;
+                        margin-left: 0.5rem;
+                    }
+
+                    p {
+                        color: var(--gray);
+                        font-size: 1rem;
+                        margin-bottom: 0.5rem;
+                    }
+
+                    strong {
+                        color: var(--secondary);
+                        font-size: 0.9rem;
+                    }
                 }
 
                 .role {
-                    margin-left: 2rem;
+                    flex: 2;
+                    
+                    @media (max-width: $md) {
+                        margin-left: 0;
+                    }
+
+                    h1 {
+                        font-size: 1.25rem;
+                        font-weight: 600;
+                        color: var(--primary);
+                        margin-bottom: 0.5rem;
+                    }
+
+                    p {
+                        color: var(--gray);
+                        font-size: 1rem;
+                        line-height: 1.6;
+                    }
                 }
             }
 
             .progressbar {
                 position: absolute;
-                height: 100%;
+                left: calc(1rem + 15px);
+                top: 0;
+                bottom: 0;
+                width: 2px;
                 display: flex;
                 flex-direction: column;
-                gap: 1.4rem;
-                left: 45%;
-
+                justify-content: space-between;
+                align-items: center;
+                z-index: 1;
+            
+                @media (max-width: $md) {
+                    left: 1.5rem;
+                }
+            
                 .line {
                     position: absolute;
-                    height: 92%;
                     width: 2px;
-                    background-image: linear-gradient(black 33%, rgba(255, 255, 255, 0) 0%);
+                    height: 100%;
+                    background-image: linear-gradient(
+                        black 33%, 
+                        rgba(255, 255, 255, 0) 0%
+                    );
                     background-position: right;
                     background-size: 2px 30px;
                     background-repeat: repeat-y;
-                    left: 48%;
-                    z-index: 1;
-                    border-radius: 5px;
+                    opacity: 0.7;
+                    left: 50%;
+                    transform: translateX(-50%);
                 }
-
-                >div {
-                    flex: 1;
-                    padding-top: .8rem;
+            
+                .circle {
+                    width: 1rem;
+                    height: 1rem;
+                    border-radius: 50%;
+                    position: relative;
                     z-index: 2;
-
-                    .circle {
-                        border-radius: 50%;
-                        background: black;
-                        width: 1.2rem;
-                        height: 1.2rem;
-                    }
+                    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.7);
                 }
             }
         }
-
     }
 }
