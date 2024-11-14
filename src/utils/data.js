@@ -29,27 +29,31 @@ export const WhatDoIHelp = [
 
 export const workExp = [
   {
-    place: "Self-Employed, Brisbane",
-    tenure: "Aug 2014 - Sep 2016",
-    role: "Visual Designer",
+    place: "JSON-Schema (Open Source Contributor)",
+    tenure: "Mar 2024 - May 2024",
+    location:"",
+    role: "Open Source Contributor",
     detail:
-      "A visual desginer dsesign for a variety of platoforms, may include internet and internet sites, games, movies, kioasks and wearbies. In short, they create the concepts",
+      "Resolved critical UI and workflow bugs in JSON-Schema repositories as part of Google Summer of Code 2024, enhancing functionality and stability.",
   },
   {
-    place: "New Man Services",
-    tenure: "Aug 2014 - Sep 2016",
-    role: "UI/UX Designer",
+    place: "Orma",
+    tenure: "Jan 2024 - Present",
+    location:"New York, USA (Remote)",
+    role: "Software Development Intern",
     detail:
-      "A visual desginer dsesign for a variety of platoforms, may include internet and internet sites, games, movies, kioasks and wearbies. In short, they create the concepts",
+      "Engineered core features for a React-based event photo-sharing app, implementing 15+ API, Postgres, and Prisma ORM enhancements. Developed highlights, slideshows, and timelines using Vision Camera in a camera-first app.",
   },
   {
-    place: "Global Solution",
-    tenure: "Aug 2014 - Sep 2016",
-    role: "Sr. Product Designer",
+    place: "UniBuzz",
+    tenure: "Sep 2023 - Sep 2024",
+    location:"Melbourne, Australia (Remote)",
+    role: "Software Development Intern",
     detail:
-      "A visual desginer dsesign for a variety of platoforms, may include internet and internet sites, games, movies, kioasks and wearbies. In short, they create the concepts",
+      "Developed JavaScript scrapers to enhance data extraction from Wikipedia, CollegeBoard, and TopUniversity, achieving 95% accuracy. Set up CI/CD workflows on GitHub Actions and deployed MongoDB Atlas Search for improved data access.",
   },
 ];
+
 
 export const comments = [
   {
@@ -154,3 +158,55 @@ export const sliderSettings = {
     },
   ],
 };
+
+export const projects = [
+  {
+    name: "Project 1",
+    img: "./project1.png",
+    tech: ["React", "Node", "MongoDB"],
+    link: "https://chatgpt.com/c/67357345-72d0-8008-93f7-4eec9c669d9c",
+  },
+  {
+    name: "Project 1",
+    img: "./project2.png",
+    tech: ["React", "Node", "MongoDB"],
+    link: "https://www.google.com",
+  },
+  {
+    name: "Project 1",
+    img: "./project1.png",
+    tech: ["React", "Node", "MongoDB"],
+    link: "https://www.google.com",
+  },
+  {
+    name: "Project 1",
+    img: "./project2.png",
+    tech: ["React", "Node", "MongoDB"],
+    link: "https://www.google.com",
+  },
+  {
+    name: "Project 1",
+    img: "./project1.png",
+    tech: ["React", "Node", "MongoDB"],
+    link: "https://www.google.com",
+  },
+  {
+    name: "Project 1",
+    img: "./project2.png",
+    tech: ["React", "Node", "MongoDB"],
+    link: "https://www.google.com",
+  },
+  {
+    name: "Project 1",
+    img: "./project1.png",
+    tech: ["React", "Node", "MongoDB"],
+    link: "https://www.google.com",
+  },
+  {
+    name: "Project 1",
+    img: "./project2.png",
+    tech: ["React", "Node", "MongoDB"],
+    link: "https://www.google.com",
+  },
+  
+]
