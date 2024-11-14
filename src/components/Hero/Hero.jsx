@@ -54,6 +54,7 @@ const Hero = () => {
             <span>APP DEVELOPER</span>
             <span>GAME DEVELOPER</span>
             <span>BOT DEVELOPER</span>
+            <span>PRODUCT STRATEGIST</span>
             </div>
           </motion.div>
         </div>
