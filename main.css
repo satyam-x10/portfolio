@@ -255,6 +255,14 @@ li {
     font-weight: 300;
 }
 
+.landing-text a {
+    font-size: 3.5rem;
+    font-weight: 500;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: underline;
+}
+
+
 .left-circ {
     position: relative;
     height: 75%;
