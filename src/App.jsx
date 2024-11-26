@@ -30,7 +30,7 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={<MainLayout />} />
-        <Route path="/orma/apk" element={<OrmaApk />} />
+        <Route path="redirect/orma/apk" element={<OrmaApk />} />
       </Routes>
     </Router>
   )
