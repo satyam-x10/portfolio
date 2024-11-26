@@ -1,14 +1,17 @@
+// App.jsx
 import React from 'react'
-import Experties from './components/Experties/Experties'
-import Footer from './components/Footer/Footer'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './components/Header/Header'
 import Hero from './components/Hero/Hero'
-import People from './components/People/People'
-import Portfolio from './components/Portfolio/Portfolio'
 import Work from './components/Work/Work'
+import Portfolio from './components/Portfolio/Portfolio'
+import Experties from './components/Experties/Experties'
+import People from './components/People/People'
+import Footer from './components/Footer/Footer'
+import OrmaApk from './redirects/orma_apk'
 import css from './styles/App.module.scss'
-const App = () => {
-  //don't forget to add font link in index.html
+
+const MainLayout = () => {
   return (
     <div className={`bg-primary ${css.container}`}>
       <Header/>
@@ -19,6 +22,17 @@ const App = () => {
       <People/>
       <Footer/>
     </div>
+  )
+}
+
+const App = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<MainLayout />} />
+        <Route path="/orma/apk" element={<OrmaApk />} />
+      </Routes>
+    </Router>
   )
 }
 
