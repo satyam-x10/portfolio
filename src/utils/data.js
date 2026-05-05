@@ -36,7 +36,15 @@ export const workExp = [
 
   {
     place: "Orma",
-    tenure: "Jan 2024 - Present",
+    tenure: "Jan 2025 - Apr 2026",
+    location: "New York, USA (Remote)",
+    role: "Senior software Developer",
+    detail:
+      "Engineered core features for a React-based event photo-sharing app, implementing 15+ API, Postgres, and Prisma ORM enhancements. Developed highlights, slideshows, and timelines using Vision Camera in a camera-first app.",
+  },
+  {
+    place: "Orma",
+    tenure: "Jan 2024 - Dec 2025",
     location: "New York, USA (Remote)",
     role: "Software Development Intern",
     detail:

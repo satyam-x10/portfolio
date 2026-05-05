@@ -38,10 +38,6 @@ const Header = () => {
           <li onClick={handleMenuItemClick}>
             <a href="#people">Testimonials</a>
           </li>
-            <a onClick={handleMenuItemClick} className={css.phone} href="tel:+916203134277">
-              <BiPhoneCall size="40px" />
-              Call Me
-            </a>
         </ul>
       </div>
     </div>
